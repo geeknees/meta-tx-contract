@@ -4,7 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "hardhat run scripts/deploy.js --network rinkeby",
+    "sign": "hardhat run scripts/sign.js --network rinkeby",
+    "events": "hardhat run scripts/events.js --network rinkeby",
+    "relay": "node scripts/relay.js"
   },
   "keywords": [],
   "author": "",
@@ -14,7 +18,9 @@
     "@nomiclabs/hardhat-etherscan": "^3.0.1",
     "@nomiclabs/hardhat-waffle": "^2.0.2",
     "chai": "^4.3.6",
+    "defender-relay-client": "^1.16.0",
     "dotenv": "^16.0.0",
+    "eth-sig-util": "^3.0.1",
     "ethereum-waffle": "^3.4.0",
     "ethers": "^5.5.4",
     "hardhat": "^2.8.4"
